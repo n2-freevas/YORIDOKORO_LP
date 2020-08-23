@@ -86,7 +86,10 @@ header{
 #first_comment{
     z-index:10;
     position:absolute;
-    top:20%;left:40%;
+    top:50%;left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     color:white;
     letter-spacing: 5px;
     line-height: 50px;
