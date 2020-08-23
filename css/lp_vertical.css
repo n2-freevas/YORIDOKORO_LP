@@ -1,0 +1,118 @@
+@charset    "UTF-8";
+
+:root{
+    --main-color: #faf3da;
+    --accent-color: #ffd967;
+    --darkaccent-color: #d64800;
+}
+h1,h2,h3,h4,h5,h6,p,a,img,ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1{font-size:40px;letter-spacing: 3px;color: var(--darkaccent-color);}
+h2{font-size:25px}
+h3{font-size:20px}
+h4{font-size:14px}
+h5{font-size:10px}
+h6{font-size:8px}
+.accent{
+    color:var(--darkaccent-color)；
+}
+body{
+    font-family:　'arial black';
+    margin: 0;
+    background-color: var(--main-color);
+    background-position: center;
+    background-size: cover;
+    --header-height:70px;
+}
+header{
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left:0;
+    height:var(--header-height);
+    width:100%;
+}
+#headericon{
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#title{
+    display: flex;
+    flex-direction: row; 
+}
+#headericon img{height:45px;margin:0 10px 0 10px;}
+.btn-flat-logo {
+    margin-right: 10px;
+    position: relative;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 3px 20px 3px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    background:var(--darkaccent-color);
+}
+.btn-flat-logo:hover {
+    background: #ffbf00;
+}
+
+.sec1{
+    position: relative;
+    height:80vh;
+}
+.sec1>.abs_img{
+    position:absolute;
+    top:0;left:0;
+    height:100%;width:100%;
+    filter:blur(5px) contrast(150%) grayscale(50%);
+    background-image:url(../img/lp/topimg.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.img_yellow_mask{
+    z-index:2;
+    position:absolute;
+    top:0;left:0;
+    height:100%;width:100%;
+    background-color:var(--accent-color);
+    opacity: 0.5;
+}
+#first_comment{
+    z-index:10;
+    position:absolute;
+    top:20%;left:40%;
+    color:white;
+    letter-spacing: 5px;
+    line-height: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+.comment{
+    margin: 0 15px 0 15px; 
+}
+.sec2{
+    padding:30px 5px 30px 5px;
+    text-align:center;
+    color:black;
+}
+#sec2-imgs{
+    margin-top:30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sec2-imgs-con{
+    justify-content: space-around;
+}
+.sec2-imgs-con img{
+    width:100px;
+    margin:0 10px 0 10px ;
+}
+
