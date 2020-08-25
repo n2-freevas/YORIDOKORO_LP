@@ -27,3 +27,10 @@ h6{font-size:8px}
     width:calc(50% - ( var(--cus-margin) * 2 ) );
     margin:var(--cus-margin);
 }
+.compare_panel_text{
+    width:80%;
+    max-width:700px;
+}
+.cpt_mark{flex: 0 1 25%;}
+.cpt_mark img{width:100%;}
+.cpt_ul{flex: 0 1 65%;font-size:16px;}
