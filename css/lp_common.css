@@ -5,6 +5,7 @@
     --accent-color: #ffd967;
     --darkaccent-color: #d64800;
     --max-width:900px;
+    --header-height:70px;
 }
 h1,h2,h3,h4,h5,h6,p,a,img,ul{
     margin: 0;
@@ -16,9 +17,6 @@ body{
     font-family:　'arial black';
     margin: 0;
     background-color: var(--main-color);
-    background-position: center;
-    background-size: cover;
-    --header-height:70px;
 }
 header{
     position: fixed;
@@ -26,7 +24,7 @@ header{
     top:0;
     left:0;
     height:var(--header-height);
-    width:100%;
+    width:100vw;
 }
 h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     color:var(--darkaccent-color)；
@@ -65,9 +63,9 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     display: flex;
     flex-direction: row; 
 }
-#headericon img{height:45px;margin:0 10px 0 10px;}
+#headericon img{height:45px;margin-left:10px;}
 .btn-flat-logo {
-    margin-right: 10px;
+    margin-right:10px;
     position: relative;
     border-radius: 10px;
     display: inline-block;
@@ -180,18 +178,31 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     margin-left:auto;
     margin-right:auto;
 }
-.content{position: absolute;transition:1s;}
-.content:nth-of-type(1){top:0;left:15%;}
-.content:nth-of-type(2){top:0;left:55%;}
-.content:nth-of-type(3){top:30%;left:0;}
+.content{position: absolute;transition:1s;width:30%}
+.content:nth-of-type(1){top:0%;left:15%;}
+.content:nth-of-type(2){top:0%;left:55%;}
+.content:nth-of-type(3){top:30%;left:0%;}
 .content:nth-of-type(4){top:30%;left:70%;}
 .content:nth-of-type(5){top:60%;left:15%;}
 .content:nth-of-type(6){top:60%;left:55%;}
-.content.pickup{
-    top:10%;left:10%;
-    position: fixed;
-    z-index:152;
-}
 #content_detail_mordal{
     visibility: hidden;
+}
+.content.pickup{
+    top:0%;left:0%;
+    z-index:152;}
+#content_detail_mordal{
+    position:absolute;
+    top:50%;left:10%;
+    z-index:151;
+    background-color: var(--main-color);
+    opacity:0;
+    transition:none;
+    visibility: hidden;
+    border-radius: 20px;
+}
+#content_detail_mordal.visible{
+    opacity:1;
+    visibility: visible;
+    transition: 1s;
 }
