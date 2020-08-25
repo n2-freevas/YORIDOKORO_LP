@@ -1,0 +1,1 @@
+var gloval_deviceis = 'a'

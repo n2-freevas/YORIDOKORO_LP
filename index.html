@@ -2,10 +2,9 @@
 <html lang="jp">
 <head>
     <link rel="shortcut icon" href="./img/yoridokoro_favicon.ico">
-    
+    <link type="text/css" rel="stylesheet" href = "./css/lp_common.css">
     <link id='css' type="text/css" rel="stylesheet" href = "./css/lp_horizon.css">
-    <script src="./js/lp_windowController.js"></script>
-    
+    <script src="./js/lp_groval.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://kit.fontawesome.com/89e57c9a66.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap" rel="stylesheet">
@@ -30,11 +29,12 @@
             </div>
         </div>
     </header>
-
-    <section class='sec sec1'>
+    <div id='vanising_mask'></div>
+    <div id='gray_mask'></div>
+    <section class='sec1'>
         <div class='abs_img'></div>
         <div class='img_yellow_mask'></div>
-        <div id='first_comment'><h3>子供たちの<br>心の「拠り所」が，<br>子供たちの未来を決める</h3></div>
+        <div id='first_comment'><h3>子供たちの<br>心の「拠り所」が，<br>未来を明るくする</h3></div>
     </section>
     <section class='sec sec2'>
         <div class='comment'>
@@ -53,18 +53,58 @@
             </div>
         </div>
         <div class='comment'>
-            <h5 style='margin-top:25px'>でも，まずはそのままの君で大丈夫.人によって輝く場所は違います</h5>
+            <h5 style='margin-top:25px'>でも，まずはそのままの君で大丈夫. 人によって輝く場所は違います.</h5>
             <h5 style='margin-top:5px'>けれど，不登校児にその居場所を見つけるのは簡単じゃない．親御さんも解決方法が分からず困っています．</h5>
             <h4 style='margin-top:5px;color:var(--darkaccent-color);'>なので，子供と同じように苦しみ悩んでいる親御さんが、<br>24時間何でも相談できる場所を作りました!</h4>
             
         </div>
     </section>
     <section class='sec sec3'>
+        <div class='comment'>
+            <h1>代表ごあいさつ</h1>
+            <h3>よりどころ 開設にあたって</h3>
+        </div>
+        <div class='separate'>
+            <div class='right'>
+                <div class='movie'>
+                    <img src='img/lp/human.svg' alt=''>
+                    <!--<iframe class='youtube-movie' src="https://www.youtube-nocookie.com/embed/cD4ReNhJ84U?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                </div>
+            </div>
+            <div class='left'>
+                <h3>● しのだ そう</h3>
+                <dl class="Prof">
+                    <table>
+                        <th><td>* </td><td>小学校6年間で実際に不登校を経験していた．</td></th>
+                        <th><td>* </td><td>社会復帰を果たしたのち，当時の自分と同じ境遇にある子どもたちを助けるために務めていた会社を辞め，不登校児とその保護者のためのコミュニティを設立．</td></th>
+                        <th><td>* </td><td>ブログやSNSを活用し情報発信をするとともに，実際に彼らの悩みに寄り添う活動をいくつも行っている．</td></th>
+                    </table>
+                </dl>
+            </div>
+        </div>
     </section>
     <section class='sec sec4'>
+        <div class='comment'>
+            <h1>よりどころ</h1>
+            <h2>は，こんなサービス！</h2>
+            <div id='insert_explain'></div>
+        </div>
+        <div id="contents_canvas">
+            <div id='content_detail_mordal'>
+                    <div id='content_detail_mordal_title'></div>
+                    <div id='content_detail_mordal_text'></div>
+            </div>
+            
+            <img class='content' id='content1' src='img/lp/consultation_isometric.svg' alt='yoridoko_consultation'>
+            <img class='content' id='content2' src='img/lp/zoom_isometric.svg' alt='yorodoko_zoom'>
+            <img class='content' id='content3' src='img/lp/cover_isometric.svg' alt='yoridoko_aoharu'>
+            <img class='content' id='content4' src='img/lp/thirdplace_isometric.svg' alt='yoridoko_thirdplace'>
+            <img class='content' id='content5' src='img/lp/tube_isometric.svg' alt='yoridoko_tube'>
+            <img class='content' id='content6' src='img/lp/matching_isometric.svg' alt='yoridoko_matching'>
+
+        </div>
     </section>
-    <footer>
-
-
-    </footer>
+    <script src="./js/lp_windowController.js"></script>
+    <script src="./js/lp_deviceController.js"></script>
+    <script src="./js/lp_contentsController.js"></script>
 </body>

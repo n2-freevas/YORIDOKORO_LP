@@ -1,0 +1,197 @@
+@charset    "UTF-8";
+
+:root{
+    --main-color: #faf3da;
+    --accent-color: #ffd967;
+    --darkaccent-color: #d64800;
+    --max-width:900px;
+}
+h1,h2,h3,h4,h5,h6,p,a,img,ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family:　'arial black';
+    margin: 0;
+    background-color: var(--main-color);
+    background-position: center;
+    background-size: cover;
+    --header-height:70px;
+}
+header{
+    position: fixed;
+    z-index:100;
+    top:0;
+    left:0;
+    height:var(--header-height);
+    width:100%;
+}
+h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
+    color:var(--darkaccent-color)；
+}
+#vanising_mask{
+    opacity: 0;
+    position: fixed;
+    z-index:155;
+    width:100vw;
+    height:100vh;
+    visibility: hidden;
+}
+#gray_mask{
+    background-color: gray;
+    opacity: 0;
+    position: fixed;
+    z-index:150;
+    width:100vw;
+    height:120vh;
+    visibility: hidden;
+    transition: 1s;
+}
+#gray_mask.visible,#vanising_mask.visible{
+    opacity: 0.8;
+    visibility: visible;
+}
+#headericon{
+    
+    z-index:102;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#title{
+    display: flex;
+    flex-direction: row; 
+}
+#headericon img{height:45px;margin:0 10px 0 10px;}
+.btn-flat-logo {
+    margin-right: 10px;
+    position: relative;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 3px 20px 3px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    background:var(--darkaccent-color);
+}
+.btn-flat-logo:hover {
+    background: #ffbf00;
+}
+.sec{
+
+    max-width:1000px;
+    width:90%;
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-left:auto;
+    margin-right:auto;
+    padding:30px 0 30px 0;
+    text-align:center;
+    color:black;
+    border-bottom: 1px solid var(--darkaccent-color);
+}
+
+.sec1{
+    position: relative;
+    height:80vh;
+}
+.sec1>.abs_img{
+    position:absolute;
+    top:0;left:0;
+    height:100%;width:100%;
+    filter:blur(5px) contrast(150%) grayscale(50%);
+    background-image:url(../img/lp/topimg.jpg);
+    background-position: top;
+    background-size: cover;
+}
+.img_yellow_mask{
+    z-index:2;
+    position:absolute;
+    top:0;left:0;
+    height:100%;width:100%;
+    background-color:var(--accent-color);
+    opacity: 0.5;
+}
+#first_comment{
+    z-index:10;
+    position:absolute;
+    top:50%;left:50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color:white;
+    letter-spacing: 5px;
+    line-height: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+
+#sec2-imgs{
+    margin-top:30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sec2-imgs-con{
+    justify-content: space-around;
+}
+.separate{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    width:50%;
+    padding:20px;
+    padding-right: 50px;
+    text-align: left;
+}
+.right{
+    width:50%;
+    padding:20px;
+    background-image: url(../img/lp/chat.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.movie{
+    position:absolute;
+    width:230px;
+    top:50%;left:48%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.movie>img{
+    width:170px;
+}
+#insert_explain{
+    margin:15px 0 15px 0;
+    color:gray;
+}
+#contents_canvas{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+.content{position: absolute;transition:1s;}
+.content:nth-of-type(1){top:0;left:15%;}
+.content:nth-of-type(2){top:0;left:55%;}
+.content:nth-of-type(3){top:30%;left:0;}
+.content:nth-of-type(4){top:30%;left:70%;}
+.content:nth-of-type(5){top:60%;left:15%;}
+.content:nth-of-type(6){top:60%;left:55%;}
+.content.pickup{
+    top:10%;left:10%;
+    position: fixed;
+    z-index:152;
+}
+#content_detail_mordal{
+    visibility: hidden;
+}

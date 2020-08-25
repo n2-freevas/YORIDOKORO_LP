@@ -1,19 +1,17 @@
 state = 'YOKONAGA'
 
 function setScrollstatus(){
-    var css = document.getElementById('css');
+    var cssHV = document.getElementById('css');
     if(window.innerWidth >= window.innerHeight){
+        if (state!='YOKONAGA'){cssHV.href = './css/lp_horizon.css';}
         state = 'YOKONAGA'
         console.log(state);
-        if (state=='TATENAGA'){css.setAttribute('href','./css/lp_horizon.css');}
     }
     else{
+        if (state!='TATENAGA'){cssHV.href = './css/lp_vertical.css';}
         state = 'TATENAGA'
         console.log(state);
-        if (state=='YOKONAGA'){css.setAttribute('href','./css/lp_vertical.css');}
-        
-        
     }
 }
-window.onload = function(){setScrollstatus();}
+window.addEventListener('load',function(){setScrollstatus();});
 window.addEventListener('resize', function(){setScrollstatus();});
