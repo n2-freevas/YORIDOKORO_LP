@@ -1,12 +1,12 @@
 @charset    "UTF-8";
 
 h1{font-size:40px;letter-spacing: 3px;color: var(--darkaccent-color);}
-h2{font-size:25px;letter-spacing: 3px;}
+h2{font-size:30px;letter-spacing: 3px;color: var(--darkaccent-color);}
 h3{font-size:20px}
 h4{font-size:16px}
 h5{font-size:12px}
 h6{font-size:8px}
-
+#entry img{width:150px;}
 .comment{margin: 0 25px 50px 25px; }
 .sec2-imgs-con img{
     width:150px;
@@ -22,3 +22,8 @@ h6{font-size:8px}
 #content_detail_mordal_text{font-size:18px;margin: 20px 0 0 0;}
 .content{max-width:400px;}
 .content.pickup{width:40%;}
+.customers{
+    --cus-margin:10px;
+    width:calc(50% - ( var(--cus-margin) * 2 ) );
+    margin:var(--cus-margin);
+}

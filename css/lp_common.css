@@ -79,6 +79,13 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .btn-flat-logo:hover {
     background: #ffbf00;
 }
+#entry{
+    position: fixed;
+    z-index:100;
+    bottom:20px;
+    right:20px;
+}
+
 .sec{
 
     max-width:1000px;
@@ -139,36 +146,38 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .sec2-imgs-con{
     justify-content: space-around;
 }
-.separate{
+.separate,.customers{
     display: flex;
     flex-direction: row;
+}
+.customer-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .left{
     width:50%;
     padding:20px;
-    padding-right: 50px;
     text-align: left;
 }
 .right{
     width:50%;
-    padding:20px;
-    background-image: url(../img/lp/chat.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
 }
-.movie{
-    position:absolute;
-    width:230px;
+.right.cus{width: 25%;height:30%}
+.left.cus{width: 75%;color:white;background-color: var(--darkaccent-color);border-radius: 10px;}
+.left.cus>h4{margin-bottom:10px;}
+.right > img{
+    position: absolute;
+    width:50%;
     top:50%;left:48%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-.movie>img{
-    width:170px;
-}
+.right.cus > img{width:100%;}
+
+
 #insert_explain{
     margin:15px 0 15px 0;
     color:gray;
