@@ -11,7 +11,6 @@ for (var i = 0; i < en_button_co.length; i++) {
 
 window.addEventListener('scroll',function(){
     windowY = window.pageYOffset;
-    console.log(windowY)
     // 要素が画面の下端にかかったら
     if ((windowY > en_button_coRect[0].top - windowH+remainder)&&(windowY < en_button_coRect[(en_button_co.length)-1].bottom - windowH + remainder)) {
         // .showを付与
