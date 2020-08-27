@@ -1,7 +1,4 @@
 
-function handleTouchMove(event) {
-        event.preventDefault();
-}
 
 window.onload = function(){
 window.setTimeout(()=>{
@@ -18,8 +15,8 @@ window.setTimeout(()=>{
         
         // ロゴの灰色部分が飛翔するシーン
         for(var i=0; i<logo_p.length;i++){
-                logo_p[i].classList.add('jump');
-                logo_p[i].classList.add('stop');}
+                logo_p[i].classList.add('jumping');
+        }
         lding.classList.add('fadeout');
 
         //for (var i=0; i < unpink.length; i++){unpink[i].classList.add('jump');}
@@ -28,20 +25,20 @@ window.setTimeout(()=>{
         // 「心」と背景がフェードする
         window.setTimeout(()=>{
                 opening.classList.add('fadeout');
-        },2000);
+        },1500);
+        // オープニングのアクセシビリティをOFFにする
         window.setTimeout(()=>{
                 opening.classList.add('disp_none');
                 logo_popin.classList.add('disp_none');
-        },2500);
+        },2000);
+        // sec1のメイン文字をフェードインする
         window.setTimeout(()=>{
                 first_comment.classList.add('fadein');
-        },3000);
+        },2500);
         //スクロール復帰
-        document.removeEventListener('scroll', handleTouchMove, { passive: false });
+        
 },3000);
 }
 
-//スクロール禁止
-document.addEventListener('scroll', handleTouchMove, { passive: false });
     
 

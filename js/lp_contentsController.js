@@ -36,7 +36,6 @@ function mordal_summon(content){
     vanising_mask.classList.add('visible');
     content_detail_mordal.classList.add('visible');
     onMordal_content.classList.add('pickup');
-    contents_canvas.scrollIntoView(true);
     content_detail_mordal_title.innerHTML = onMordal_content.getAttribute('alt');
     content_detail_mordal_text.innerHTML = onMordal_content.getAttribute('alttwo');
 
@@ -61,20 +60,18 @@ function addEvent_forContents(){
         console.log('Touch eventListner insert to contnets')
         for (var i = 0;i<contents.length;i++){
             contents[i].addEventListener('touchstart',function(e){
-                e.preventDefault();
                 onMordal_content = this;
                 mordal_summon();
-            });
+            },{ passive: false });
         }
     }
     else{
         console.log('Click eventListner insert to contnets')
         for (var i = 0;i<contents.length;i++){
             contents[i].addEventListener('click',function(e){
-                e.preventDefault();
                 onMordal_content = this;
                 mordal_summon();
-            });
+            },{ passive: false });
         }
     }
 

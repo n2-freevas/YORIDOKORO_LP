@@ -8,17 +8,18 @@ for (var i = 0; i < en_button_co.length; i++) {
     en_button_coRect.push(en_button_co[i].getBoundingClientRect());
 }
 
-
-window.addEventListener('scroll',function(){
-    windowY = window.pageYOffset;
-    // 要素が画面の下端にかかったら
-    if ((windowY > en_button_coRect[0].top - windowH+remainder)&&(windowY < en_button_coRect[(en_button_co.length)-1].bottom - windowH + remainder)) {
-        // .showを付与
-        entry_button.classList.add('semivanish');
-        //en_button_co[i].classList.add('show');
-    }
-    else {
-        entry_button.classList.remove('semivanish');
-        //en_button_co[i].classList.remove('show');
-    }
-});
+if (gloval_deviceis == 'mouse'){
+    window.addEventListener('scroll',function(){
+        windowY = window.pageYOffset;
+        // 要素が画面の下端にかかったら
+        if ((windowY > en_button_coRect[0].top - windowH+remainder)&&(windowY < en_button_coRect[(en_button_co.length)-1].bottom - windowH + remainder)) {
+            // .showを付与
+            entry_button.classList.add('semivanish');
+            //en_button_co[i].classList.add('show');
+        }
+        else {
+            entry_button.classList.remove('semivanish');
+            //en_button_co[i].classList.remove('show');
+        }
+    });
+}
