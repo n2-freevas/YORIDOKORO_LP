@@ -193,7 +193,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 
 
 #sec2-imgs{
-    margin-top:30px;
+    margin:0 0 20px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
