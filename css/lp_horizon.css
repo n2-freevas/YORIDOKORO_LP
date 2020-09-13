@@ -17,9 +17,9 @@ h6{font-size:8px}
     width:70vw;
     height:70vw;
 }
-#content_detail_mordal{padding:50px;}
-#content_detail_mordal_title{font-size:25px;font-weight: bold;color:var(--darkaccent-color);}
-#content_detail_mordal_text{font-size:18px;margin: 20px 0 0 0;}
+#content_detail_mordal{padding:30px;}
+#content_detail_mordal_title{font-size:22px;font-weight: bold;color:var(--darkaccent-color);}
+#content_detail_mordal_text{font-size:15px;margin: 20px 0 0 0;}
 .content{max-width:400px;}
 .content.pickup{width:40%;}
 .customers{
@@ -71,5 +71,19 @@ h6{font-size:8px}
     20%{bottom:calc(var(--bottom-par) + 30px);}
     40%{bottom:var(--bottom-par);height:87px;}
     50%{height:57px;}
-    60%{height:87px;}}
+    60%{height:87px;}
+}
 
+#sou_comment_left{
+    width:150px;
+}
+#sou_comment_right{
+    width:calc(100% - 150px);
+}
+#sou_hukidashi_arrow{
+    width:40px;
+    margin-left: 20px;
+}
+#sou_hukidashi{
+    border-radius: 10px;
+}

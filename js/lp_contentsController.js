@@ -53,6 +53,7 @@ function mordal_close(){
     1000)
 }
 
+
 // コンテンツ画像クリック時にモーダルを呼び出すリスナーを，全コンテンツ画像に適用する関数
 function addEvent_forContents(){
     
@@ -62,6 +63,8 @@ function addEvent_forContents(){
             contents[i].addEventListener('touchstart',function(e){
                 onMordal_content = this;
                 mordal_summon();
+                sv_id = onMordal_content.getAttribute('sv');
+                sou_summon(sv_id);
             },{ passive: false });
         }
     }
@@ -71,6 +74,8 @@ function addEvent_forContents(){
             contents[i].addEventListener('click',function(e){
                 onMordal_content = this;
                 mordal_summon();
+                sv_id = onMordal_content.getAttribute('sv');
+                sou_summon(sv_id);
             },{ passive: false });
         }
     }
@@ -79,6 +84,7 @@ function addEvent_forContents(){
     vanising_mask.addEventListener('click',function(e){
         e.preventDefault(e);
         mordal_close();
+        sou_return();
     });
 }
 

@@ -1,25 +1,65 @@
-var en_button_co = document.querySelectorAll('.en_but_co'); // フェードさせる要素の取得
-var en_button_coRect = []; // 要素の位置を取得するための配列
-var windowY = window.pageYOffset; // ウィンドウのスクロール位置
-var remainder = 200; // ちょっとはみ出させる部分
-var entry_button = document.getElementById('entry');
-// 要素の位置を取得
-for (var i = 0; i < en_button_co.length; i++) {
-    en_button_coRect.push(en_button_co[i].getBoundingClientRect());
+var en_btn_co = document.querySelectorAll('.en_btn_co');
+var sv_sec = document.querySelectorAll('.sv_sec');
+var sv_sec_close = document.querySelectorAll('.sv_sec_close');
+var fixedparts = document.getElementsByClassName('fixedparts');
+var firstcallback = 0;
+
+const option = {
+    root:null,
+    rootMargin:"-50% 0px",
+    threshold:0
+};
+const option2 = {
+    root:null,
+    rootMargin:"-20% 0px -80% 0px",
+    threshold:0
+};
+
+
+obs_fixedpart = new IntersectionObserver(fixedpart_vanish,option);
+obs_sou_summon = new IntersectionObserver(sou_summon_for_scroll,option2);
+obs_sou_return = new IntersectionObserver(sou_return_for_scroll,option2);
+en_btn_co.forEach(box =>{
+    obs_fixedpart.observe(box);
+});
+sv_sec.forEach(ss=>{
+    obs_sou_summon.observe(ss);
+});
+sv_sec_close.forEach(ssc=>{
+    obs_sou_return.observe(ssc)
+});
+
+
+
+
+function fixedpart_vanish(entries){
+    entries.forEach(entry =>{
+        if(entry.isIntersecting){
+            for (var i=0; i< fixedparts.length; i++){
+                fixedparts[i].classList.add('semivanish');
+            }
+        }
+        else{
+            for (var i=0; i< fixedparts.length; i++){
+                fixedparts[i].classList.remove('semivanish');
+            }
+        }
+    });
 }
 
-if (gloval_deviceis == 'mouse'){
-    window.addEventListener('scroll',function(){
-        windowY = window.pageYOffset;
-        // 要素が画面の下端にかかったら
-        if ((windowY > en_button_coRect[0].top - windowH+remainder)&&(windowY < en_button_coRect[(en_button_co.length)-1].bottom - windowH + remainder)) {
-            // .showを付与
-            entry_button.classList.add('semivanish');
-            //en_button_co[i].classList.add('show');
-        }
-        else {
-            entry_button.classList.remove('semivanish');
-            //en_button_co[i].classList.remove('show');
-        }
+
+function sou_summon_for_scroll(entries){
+    if (firstcallback > 0){
+        entries.forEach(entry =>{       
+            sv_id = entry.target.getAttribute('sv');
+            sou_summon(sv_id);
+        });
+    }
+    firstcallback = firstcallback + 1;
+}
+
+function sou_return_for_scroll(entries){
+    entries.forEach(entry =>{       
+        sou_return();
     });
 }

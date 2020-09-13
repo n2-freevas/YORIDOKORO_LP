@@ -26,6 +26,7 @@ header{
     left:0;
     height:var(--header-height);
     width:100vw;
+    background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0))
 }
 h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     color:var(--darkaccent-color)；
@@ -132,10 +133,13 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     z-index:100;
     bottom:20px;
     right:20px;
+}
+.fixedparts{
     -webkit-transition: 0.5s;-o-transition: 0.5s;transition: 0.5s;
 }
-#entry.semivanish{opacity:0.3;}
-#entry:hover{opacity:1;}
+.fixedparts.semivanish{opacity:0.3;}
+.fixedparts:hover{opacity:1;}
+
 .sec{
     max-width:1000px;
     width:90%;
@@ -225,7 +229,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .left.cus>h4{margin-bottom:10px;}
 .right > img{
     position: absolute;
-    width:50%;
+    width:80%;
     top:50%;left:48%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -258,7 +262,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     z-index:152;}
 #content_detail_mordal{
     position:absolute;
-    top:50%;left:10%;
+    top:45%;left:10%;
     z-index:151;
     background-color: var(--main-color);
     opacity:0;
@@ -289,3 +293,44 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .cpt_mark{flex: 0 1 25%;}
 .cpt_ul{flex: 0 1 65%;}
 
+#sou_comment{
+    position: fixed;
+    bottom:0;
+    left:0;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:120px;
+    z-index: 200;
+    padding:0 0 20px 0;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    -webkit-transition: 1s;-o-transition: 1s;transition: 1s;
+}
+#sou_comment.hide{
+    bottom:-200px;
+}
+
+#sou_comment_left{
+    text-align: right;
+}
+#sou_comment_right{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+}
+#sou_img{
+    width:90%;
+}
+#sou_hukidashi_arrow{
+    margin-top: 70px;
+    width:40px;
+}
+#sou_hukidashi{
+    background: var(--darkaccent-color);
+    border-radius: 10px;
+    padding:10px 20px 10px 20px;
+}
+#sou_hukidashi p{
+    font-size: 14px;
+}

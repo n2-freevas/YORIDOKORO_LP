@@ -4,7 +4,6 @@
     <link rel="shortcut icon" href="./img/yoridokoro_favicon.ico">
     <link type="text/css" rel="stylesheet" href = "./css/lp_common.css">
     <link id='css' type="text/css" rel="stylesheet" href = "./css/lp_horizon.css">
-    <script src="./js/lp_groval.js"></script>
     <script src="./js/lp_animationController.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://kit.fontawesome.com/89e57c9a66.js" crossorigin="anonymous"></script>
@@ -19,10 +18,10 @@
 <body>
     <header>
         <div id='headericon'>
-            <div id = 'title'>
+            <div id = 'title' class='fixedparts'>
                 <img src='img/yoridokoro_logo.svg' alt=''>
             </div>
-            <div id='loginbutton'>
+            <div id='loginbutton' class='fixedparts'>
                 <a href="login.html" class="btn-flat-logo">
                 <h6>既に会員の方は</h6>
                 <h4>ログイン</h4>
@@ -30,6 +29,9 @@
             </div>
         </div>
     </header>
+    <div id='entry' class='fixedparts'>
+        <a href='entry.html'><img src='img/lp/entry_button.svg' alt=''></a>
+    </div>
     <div id='opening'></div>
     <div id='logo_popin'>
         <img class='logo_p' src='img/logo_parts/logo_yo.svg' alt=''>
@@ -41,12 +43,12 @@
     </div>
     <div id='vanising_mask'></div>
     <div id='gray_mask'></div>
-    <section class='sec1'>
+    <section class='sec1 sv_sec_close'>
         <div class='abs_img'></div>
         <div class='img_yellow_mask'></div>
         <div id='first_comment'><h3>子ども達の<br>心の「拠り所」が，<br>未来を明るくする</h3></div>
     </section>
-    <section class='sec sec2'>
+    <section class='sec sec2 sv_sec_close'>
         <div class='comment'>
             <h1>43万人</h1>
             <h3>日本全国の不登校児の数<span style='font-size:10px;'>[1]</span></h3>
@@ -73,12 +75,13 @@
             <h4 style='margin-top:15px'>子どもの笑顔がみえる場所</h4>
             <h4 style='margin-top:15px'>明るい未来が待っている場所</h4>
             
-            <h3 style='margin-top:15px;color:var(--darkaccent-color);'>それが私たちの創った<span style='font-size:30px'> "よりどころ" </span>です!</h3>
+            <h3 style='margin-top:15px;color:var(--darkaccent-color);'>それが私たちの創った<br><span style='font-size:30px'> "よりどころ" </span>です!</h3>
             
             
         </div>
     </section>
-    <section class='sec sec3 en_but_co'>
+    <section class='en_btn_co'>
+    <section class='sec sec3 sv_sec_close' sv='sv_sec3'>
         <div class='comment'>
             <h2>代表ごあいさつ</h2>
             <h3>よりどころ 開設にあたって</h3>
@@ -117,7 +120,7 @@
             だから今度は，僕がその『居場所』を，子ども達に与える番だと決意しました．<br>
         </div>
     </section>
-    <section class='sec sec4 en_but_co'>
+    <section class='sec sec4 sv_sec' sv='sv_sec4'>
         <div class='comment'>
             <h2>よりどころ</h2>
             <h3>は，こんなサービス！</h3>
@@ -129,15 +132,15 @@
                     <div id='content_detail_mordal_text'></div>
             </div>
             
-            <img class='content' id='content1' src='img/lp/consultation_isometric.svg' alt='よりどこルーム' alttwo = '不登校に関するお悩みを「いつでも」「なんでも」相談可能なチャットサービス．また、親御さんが抱える悩みに対して、沢山の親御さん同士でサポートできる。'>
-            <img class='content' id='content2' src='img/lp/zoom_isometric.svg' alt='よりどこZoom' alttwo = '子ども向けZoomミーティングでは，ミーティングを通じて全国に仲間をつくり，Zoomならではの「遊び」と「学び」を提供する．親御さん向けZoomミーティングでは，カウンセラーの方や，社会復帰を果たした元不登校児をお招きして、講義や質問タイム・座談会を行う。'>
-            <img class='content' id='content3' src='img/lp/cover_isometric.svg' alt='青春を取り戻そう' alttwo='失ったと思われた青春は帰ってくる．修学旅行や運動会などの催し物，その子だけの学生証．普通の人と同じじゃないけど，普通の人と全く違う青春を．'>
-            <img class='content' id='content4' src='img/lp/thirdplace_isometric.svg' alt='みんなのサードプレイス' alttwo='大阪の和泉市に不登校児の「サードプレイス」を作り、宿泊しながら学べたり、様々な職の社会人と会うツアーなどを組む．もちろん、毎日お祭りなくらい遊びもします。'>
-            <img class='content' id='content5' src='img/lp/tube_isometric.svg' alt='よりどこTube' alttwo='「受験」「子どもとの関り」「学校との関り」「夫婦関係」などの悩みに分け、専門家やカウンセラー、元不登校児の方の動画を取り、コミュニティ限定で配信する。'>
-            <img class='content' id='content6' src='img/lp/matching_isometric.svg' alt='お悩みマッチングサービス' alttwo='それぞれが抱える悩みと共通する人を見つけ、相談できるシステム。また、親御さん同士でも地方で友達を作ることができる。'>
+            <img class='content sou_ckick_visible' sv='sv_room' id='content1' src='img/lp/consultation_isometric.svg' alt='よりどこルーム' alttwo = '不登校に関するお悩みを「いつでも」「なんでも」相談可能なチャットサービス．また、親御さんが抱える悩みに対して、沢山の親御さん同士でサポートできる。'>
+            <img class='content sou_ckick_visible' sv='sv_zoom' id='content2' src='img/lp/zoom_isometric.svg' alt='よりどこZoom' alttwo = '子ども向けZoomミーティングでは，ミーティングを通じて全国に仲間をつくり，Zoomならではの「遊び」と「学び」を提供する．親御さん向けZoomミーティングでは，カウンセラーの方や，社会復帰を果たした元不登校児をお招きして、講義や質問タイム・座談会を行う。'>
+            <img class='content sou_ckick_visible' sv='sv_cover' id='content3' src='img/lp/cover_isometric.svg' alt='青春を取り戻そう' alttwo='失ったと思われた青春は帰ってくる．修学旅行や運動会などの催し物，その子だけの学生証．普通の人と同じじゃないけど，普通の人と全く違う青春を．'>
+            <img class='content sou_ckick_visible' sv='sv_third' id='content4' src='img/lp/thirdplace_isometric.svg' alt='みんなのサードプレイス' alttwo='大阪の和泉市に不登校児の「サードプレイス」を作り、宿泊しながら学べたり、様々な職の社会人と会うツアーなどを組む．もちろん、毎日お祭りなくらい遊びもします。'>
+            <img class='content sou_ckick_visible' sv='sv_tube' id='content5' src='img/lp/tube_isometric.svg' alt='よりどこTube' alttwo='「受験」「子どもとの関り」「学校との関り」「夫婦関係」などの悩みに分け、専門家やカウンセラー、元不登校児の方の動画を取り、コミュニティ限定で配信する。'>
+            <img class='content sou_ckick_visible' sv='sv_matching' id='content6' src='img/lp/matching_isometric.svg' alt='お悩みマッチングサービス' alttwo='それぞれが抱える悩みと共通する人を見つけ、相談できるシステム。また、親御さん同士でも地方で友達を作ることができる。'>
         </div>
     </section>
-    <section class='sec sec5 en_but_co'>
+    <section class='sec sec5 sv_sec_close' sv='sv_sec5'>
         <div class='comment'>
             <h2>利用者の声</h2>
             <h3>あつめてみました</h3>
@@ -145,7 +148,7 @@
         <div class='customer-container'>
             <div class='customers'>
                 <div class='right cus'>
-                    <img src='img/lp/customer-1.png' alt=''>
+                    <img src='img/lp/customer-1.svg' alt=''>
                 </div>
                 <div class='left cus'>
                     <h4>L・Gさん：不登校歴3年</h4>
@@ -154,7 +157,7 @@
             </div>
             <div class='customers'>
                 <div class='right cus'>
-                    <img src='img/lp/customer-1.png' alt=''>
+                    <img src='img/lp/customer-1.svg' alt=''>
                 </div>
                 <div class='left cus'>
                     <h4>L・Gさん：不登校歴3年</h4>
@@ -163,7 +166,7 @@
             </div>
             <div class='customers'>
                 <div class='right cus'>
-                    <img src='img/lp/customer-1.png' alt=''>
+                    <img src='img/lp/customer-1.svg' alt=''>
                 </div>
                 <div class='left cus'>
                     <h5>L・Gさん：不登校歴3年</h5>
@@ -174,7 +177,7 @@
             </div>
             <div class='customers'>
                 <div class='right cus'>
-                    <img src='img/lp/customer-1.png' alt=''>
+                    <img src='img/lp/customer-1.svg' alt=''>
                 </div>
                 <div class='left cus'>
                     <h4>L・Gさん：不登校歴3年</h4>
@@ -183,7 +186,7 @@
             </div>
         </div>
     </section>
-    <section class='sec sec6 en_but_co'>
+    <section class='sec sec6 sv_sec' sv='sv_sec6'>
         <h3>他の類似サービスと</h3>
         <h2>比較してみる</h2>
         <div class='compare_panel'>
@@ -213,13 +216,24 @@
             <img src='img/lp/compare_now.svg' alt=''>
         </div>
     </section>
-    <div id='entry'>
-        <a href='entry.html'><img src='img/lp/entry_button.svg' alt=''></a>
+    </section>
+    <div id='sou_comment' class='hide'>
+        <div id='sou_comment_left'>
+            <img id='sou_img' src='img/lp/selfie.png'>
+        </div>
+        <div id='sou_comment_right'>
+            <div id='sou_hukidashi_arrow'>
+                <img src='img/lp/hukidashi_arrow.svg'>
+            </div>
+            <div id='sou_hukidashi'>
+                <p id='sou_text'>あああああああああああああああ<br>ああああああああああああ</p>
+            </div>
+        </div>
     </div>
-    <footer>
-    </footer>
+    <script src="./js/lp_groval.js"></script>
     <script src="./js/lp_windowController.js"></script>
     <script src="./js/lp_deviceController.js"></script>
     <script src="./js/lp_contentsController.js"></script>
     <script src="./js/lp_scrollController.js"></script>
+    
 </body>
