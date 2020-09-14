@@ -226,7 +226,6 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 }
 .right.cus{width: 25%;height:30%}
 .left.cus{width: 75%;color:white;background-color: var(--darkaccent-color);border-radius: 10px;}
-.left.cus>h4{margin-bottom:10px;}
 .right > img{
     position: absolute;
     width:80%;

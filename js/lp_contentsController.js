@@ -13,6 +13,7 @@ const content_title =  ['よりどころ相談室',
                         'みんなのサードプレイス',
                         'よりどこTube',
                         'お悩みマッチングサービス']
+
 const content_explain =    ['不登校に関するお悩みを「いつでも」「なんでも」相談可能なチャットサービス．また、親御さんが抱える悩みに対して、沢山の親御さん同士でサポートできる。',
                             '子供向けZoomミーティングでは，ミーティングを通じて全国に仲間をつくり，Zoomならではの「遊び」と「学び」を提供する．親御さん向けZoomミーティングでは，カウンセラーの方や，社会復帰を果たした元不登校児をお招きして、講義や質問タイム・座談会を行う。',
                             '失ったと思った青春は帰ってくる．修学旅行や運動会などの催し物，その子だけの学生証．学校とは全く違う「居場所」での，いままでにない青春を．',
@@ -58,24 +59,26 @@ function mordal_close(){
 function addEvent_forContents(){
     
     if (gloval_deviceis == 'touch'){
-        console.log('Touch eventListner insert to contnets')
+        console.log('Touch eventListner insert to contnets');
         for (var i = 0;i<contents.length;i++){
             contents[i].addEventListener('touchstart',function(e){
                 onMordal_content = this;
                 mordal_summon();
                 sv_id = onMordal_content.getAttribute('sv');
-                sou_summon(sv_id);
+                emotion = onMordal_content.getAttribute('emotion');
+                sou_summon(sv_id,emotion);
             },{ passive: false });
         }
     }
     else{
-        console.log('Click eventListner insert to contnets')
+        console.log('Click eventListner insert to contnets');
         for (var i = 0;i<contents.length;i++){
             contents[i].addEventListener('click',function(e){
                 onMordal_content = this;
                 mordal_summon();
                 sv_id = onMordal_content.getAttribute('sv');
-                sou_summon(sv_id);
+                emotion = onMordal_content.getAttribute('emotion');
+                sou_summon(sv_id,emotion);
             },{ passive: false });
         }
     }

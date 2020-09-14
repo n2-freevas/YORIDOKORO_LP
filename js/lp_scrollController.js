@@ -52,7 +52,8 @@ function sou_summon_for_scroll(entries){
     if (firstcallback > 0){
         entries.forEach(entry =>{       
             sv_id = entry.target.getAttribute('sv');
-            sou_summon(sv_id);
+            emotion = entry.target.getAttribute('emotion');
+            sou_summon(sv_id,emotion);
         });
     }
     firstcallback = firstcallback + 1;
