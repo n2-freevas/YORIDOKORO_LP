@@ -210,6 +210,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .separate,.customers{
     display: flex;
     flex-direction: row;
+    margin-bottom:10px;
 }
 .customer-container{
     display: flex;
@@ -230,6 +231,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .right > img{
     position: absolute;
     width:80%;
+    max-width: 260px;
     top:50%;left:48%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
