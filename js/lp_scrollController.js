@@ -19,6 +19,7 @@ const option2 = {
 obs_fixedpart = new IntersectionObserver(fixedpart_vanish,option);
 obs_sou_summon = new IntersectionObserver(sou_summon_for_scroll,option2);
 obs_sou_return = new IntersectionObserver(sou_return_for_scroll,option2);
+
 en_btn_co.forEach(box =>{
     obs_fixedpart.observe(box);
 });
@@ -26,8 +27,9 @@ sv_sec.forEach(ss=>{
     obs_sou_summon.observe(ss);
 });
 sv_sec_close.forEach(ssc=>{
-    obs_sou_return.observe(ssc)
+    obs_sou_return.observe(ssc);
 });
+
 
 
 
@@ -64,3 +66,22 @@ function sou_return_for_scroll(entries){
         sou_return();
     });
 }
+
+function scroll_fadeiner(entries){
+    entries.forEach(entry=>{
+        entry.target.classList.add('fadein');
+    })
+}
+
+$(function(){
+	$(window).scroll(function (){
+		$('.scroll_fadein').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight + 200){
+				$(this).addClass('fadein');
+			}
+		});
+	});
+});

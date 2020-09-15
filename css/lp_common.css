@@ -246,7 +246,15 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     max-width: 770px;
     box-shadow: 3px 3px 3px 3px #bbb;
 }
-
+.scroll_fadein{
+    opacity:0;
+    transform : translate(0, 50px);
+    -webkit-transition: 1s;-o-transition: 1s;transition: 1s;
+}
+.scroll_fadein.fadein{
+    transform : translate(0,0);
+    opacity:1;
+}
 
 #insert_explain{
     margin:15px 0 15px 0;
