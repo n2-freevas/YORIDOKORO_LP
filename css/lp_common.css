@@ -14,7 +14,9 @@ h1,h2,h3,h4,h5,h6,p,a,img,ul{
     border: 0;
 }
 
+
 body{
+    
     font-family:Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: var(--main-color);
@@ -30,7 +32,12 @@ header{
     background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0))
 }
 h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
-    color:var(--darkaccent-color)；
+    display: inline-block;
+    color:var(--darkaccent-color);
+    
+}
+.text_marker{
+    background: linear-gradient(transparent 60%, var(--accent-color) 60%);
 }
 
 /* Opening animation */
@@ -139,6 +146,27 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .fixedparts.semivanish{opacity:0.3;}
 .fixedparts:hover{opacity:1;}
 
+
+.sec_title{
+    font-family: fot-tsukuardgothic-std,sans-serif;
+    text-align: center;
+    padding-bottom: 12px;
+    position: relative;
+    padding: 30px 0 10px 0;
+    margin-bottom: 100px;
+}
+.sec_title:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
 .sec{
     max-width:1000px;
     width:90%;
@@ -151,10 +179,15 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     color:#444;
     border-bottom: 1px solid var(--darkaccent-color);
 }
+.sec.expand{
+    max-width: none;
+    width:100%;
+}
 
 .sec1{
     position: relative;
     height:80vh;
+    margin-bottom: 70px;
 }
 .sec1>.abs_img{
     position:absolute;
@@ -195,22 +228,45 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 }
 
 /* sec 2*/
-#sec2-imgs{
-    margin:0 0 20px 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.photoview{padding-bottom:100px;position: relative;}
+.beforebg::before{
+    content: '';
+    width: 59%;
+    height: 375px;
+    background-color:white;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    z-index: -1;
 }
-.sec2-imgs-con{
-    justify-content: space-around;
-}
+.beforebg.reverse::before{left:0;}
+
 /* sec 3*/
-.separate,.customers{
+.separate,.customers,.photoview{
     display: flex;
     flex-direction: row;
-    margin-bottom:10px;
+    margin-bottom:75px;
 }
+.photoview{
+    margin-bottom: 0;
+    text-align: left;}
+.photoview.reverse{flex-direction: row-reverse;}
+.pv_left{
+    width:50%;
+}
+.pv_left img{
+    width:100%;
+}
+.pv_right{
+    width:50%;
+}
+.right_title{padding:10px 30px 10px 11%;}
+.reverse > .right_title{text-align: right;}
+.reverse{text-align: right;}
+.right_text_container{
+    padding:10px 30px 10px 11%;
+    line-height: 2;}
+
 .customer-container{
     display: flex;
     flex-direction: row;
@@ -218,8 +274,13 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 }
 .left{
     width:50%;
-    padding:20px;
     text-align: left;
+}
+.left.onpadding{
+    padding:20px;
+}
+.left img{
+    width:100%;
 }
 .right{
     width:50%;
@@ -308,6 +369,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .compare_panel img{
     max-width: 700px;
     width:80%;
+    margin-top:20px;
 }
 .compare_panel_text{
     display:flex;
@@ -361,3 +423,6 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 #sou_hukidashi p{
     font-size: 14px;
 }
+
+
+
