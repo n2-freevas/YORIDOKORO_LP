@@ -39,7 +39,24 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 .text_marker{
     background: linear-gradient(transparent 60%, var(--accent-color) 60%);
 }
-
+.comment{
+    width:300px;
+    position: relative;
+}
+.stamp{
+    content: '';
+    position: absolute;
+    top: -25px;left: 10px;
+    width: 0px;height: 0px;
+    background: url(../img/yoridokoro_stamp.svg) no-repeat;
+    opacity: 0;
+    z-index: -1;
+    transition: 1s;
+}
+.stamp.stamped{
+    width: 80px;height: 80px;
+    opacity:0.8;
+}
 /* Opening animation */
 #opening{
     position: fixed;
@@ -153,7 +170,7 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
     padding-bottom: 12px;
     position: relative;
     padding: 30px 0 10px 0;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 .sec_title:before {
     content: '';
@@ -343,14 +360,10 @@ h1.accent,h2.accent,h3.accent,h4.accent,h5.accent,h6.accent{
 
 
 #content_detail_mordal{
-    visibility: hidden;
-}
-.content.pickup{
-    top:0%;left:0%;
-    z-index:152;}
-#content_detail_mordal{
-    position:absolute;
-    top:45%;left:10%;
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    top:10%;left:10%;
     z-index:151;
     background-color: var(--main-color);
     opacity:0;
