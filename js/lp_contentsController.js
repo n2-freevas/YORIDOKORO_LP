@@ -49,10 +49,9 @@ function mordal_close(){
     gray_mask.classList.remove('visible');
     vanising_mask.classList.remove('visible');
     content_detail_mordal.classList.remove('visible');
-    window.setTimeout(()=>{
-        content_detail_mordal_title.innerHTML = '';
-        content_detail_mordal_text.innerHTML = '';},
-    1000)
+    
+    content_detail_mordal_title.innerHTML = '';
+    content_detail_mordal_text.innerHTML = '';
 }
 
 
